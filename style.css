@@ -1,0 +1,760 @@
+* {
+	margin: 0;
+	padding: 0;
+	scroll-behavior: smooth;
+	/*box-sizing: border-box;*/
+}
+html {
+	scroll-padding-top: 144px;
+}
+body {
+	margin: 0;
+	padding: 0;
+	background: url(images/water.jpg) fixed;
+}
+
+/* === ESTRUCTURA === */
+header {
+	width: 90%;
+	height: 100%;
+	overflow: hidden;
+	background: rgb(255, 255, 255);
+	margin: 0 auto;
+	padding: 0.8% 0;
+	text-align: center;
+	position: sticky;
+	top: 0;
+	z-index: 1000;
+}
+.logo {
+	float: left; 
+	padding-left: 3%;
+}
+nav {
+	height: auto;
+}
+main {
+	width: 90%;
+	height: auto;
+	overflow: hidden;
+	margin: 0 auto;
+}
+.fondo-main-index {
+	width: 90%;
+	background: #fff url(images/resort.jpg) top left no-repeat;
+}
+.intro {
+	width: 50%;
+	height: 100%;
+	overflow: hidden;
+	margin: 10% 0 10% 0;
+	padding: 0 4% 2% 4%;
+}
+.fondo-main-interno {
+	background: rgb(100, 177, 228);
+	display: flex;
+	flex-direction: row;
+}
+.section-interno {
+	width: 68%;
+	float: left;
+	background: rgb(61, 163, 231);
+	padding: 3% 4%;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	align-items: stretch;
+}
+.section-interno section {
+	width: 100%;
+	margin-bottom: 50px;
+}
+section {
+	margin-bottom: 2%;
+}
+aside {
+	width: 24%;
+	float: left;
+	background: rgb(100, 177, 228);
+}
+footer {
+	width: 86%;
+	height: auto;
+	background: rgb(100, 177, 228);
+	margin: 0 auto;
+	padding: 0.5% 2% 0.1% 2%;
+	z-index: 10;
+}
+/* === FIN DE ESTRUCTURA === */
+
+/* === MENU SUPERIOR  === */
+a.top_menu:link, a.top_menu:visited {
+	font-family: sans-serif;
+	font-weight: bold;
+	font-size: 1.2rem;
+	color: #50c9df;
+	text-decoration: none;
+	margin: 0 30px;
+	width: auto;
+	background: none;
+}
+a.top_menu:hover {
+	color: rgb(152, 182, 228);
+}
+.top_menu {
+	width: 100%;
+	background: rgb(116, 182, 226);
+	padding: 7px 0;
+	display: flex;
+	justify-content: center;
+}
+/*====MENU HAMBURGUESA====*/
+.topnav {
+  overflow: hidden;
+  /*background-color: rgba(204, 184, 163, 0.9);*/
+  display: flex;
+	justify-content: safe flex-end;
+}
+.topnav a {
+	float: left;
+  display: block;
+  color: rgb(100, 177, 228);
+  text-align: center;
+ 	padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+.topnav a:hover {
+  /*background-color: #CDBAA5;*/
+  color: black;
+}
+.topnav a.active {
+  background-color: #CDBAA5;
+  color: white;
+}
+.topnav .icon {
+  display: none;
+}
+@media screen and (max-width: 600px) {
+
+  .topnav a:not(:first-child) {
+  	display: none;
+  }
+  .topnav a.icon {
+    float: right;
+    display: block;
+    margin-top: 3px;
+    padding-right: 16px;
+  }
+  .topnav a {
+ 		padding: 14px 0;
+  }
+  .topnav {
+  	display: block;
+  }
+
+}
+@media screen and (max-width: 600px) {
+
+  .topnav.responsive {
+  	position: relative;
+  }
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .topnav {
+  	display: block;
+  }
+  .logo {
+	float: none; 
+	padding-left: 0;
+	padding-top: 1%;
+}
+
+}
+/* === FIN DE MENU SUPERIOR  === */
+
+/* === MENU LATERAL  === */
+a.side_menu:link, a.side_menu:visited {
+	font-family: arial, sans-serif;
+	font-size: 1.1rem;
+	color: #fff;
+	text-decoration: none;
+	width: auto;
+	border-bottom: 1px #fff solid;
+	padding: 14px 34px;
+}
+a.side_menu:hover {
+	color: #fff;
+	background: #9fc4dd;
+}
+a.top_menu2:link, a.top_menu2:visited {
+	font-family: arial, sans-serif;
+	font-weight: bold;
+	font-size: 1.2rem;
+	color: #6d5f50;
+	text-decoration: none;
+	margin: 0 30px;
+	width: auto;
+	background: none;
+}
+a.top_menu2:hover {
+	color: #fff;
+}
+.top_menu2 {
+	display: block;
+}
+/*====MENU HAMBURGUESA 2====*/
+.sidenav {
+  overflow: hidden;
+}
+.sidenav a {
+	display: flex;
+	flex-direction: column;
+  color: rgb(100, 177, 228);
+  background: rgb(100, 177, 228);
+  text-align: center;
+ 	padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  text-align: left;
+}
+.sidenav a:hover {
+  color: #fff;
+}
+.sidenav a.active {
+  color: white;
+}
+.sidenav .icon2 {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+
+  .sidenav a:not(:first-child) {
+  	display: none;
+  }
+  .sidenav a.icon2 {
+    float: right;
+    display: block;
+    position: absolute;
+    color: white;
+    top: 130px;
+    right: 0;
+  }
+  .sidenav {
+  	display: block;
+  }
+
+}
+@media screen and (max-width: 768px) {
+
+  .sidenav.responsive2 {
+  	position: relative;
+  }
+  .sidenav.responsive2 .icon2 {
+    position: absolute;
+    right: 0;
+    top: 15px;
+  }
+  .sidenav.responsive2 a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .sidenav {
+  	display: block;
+  }
+
+}
+/* === FIN DE MENU LATERAL  === */
+
+/* === CARRUSEL DE SLIDES === */
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 90%;
+  position: relative;
+  margin: auto;
+  margin-bottom: -26px;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: #fff;
+}
+
+/* Caption text */
+.text {
+  color: rgb(100, 177, 228);
+  font-size: 15px;
+  padding: 0 5%;
+  position: absolute;
+  bottom: 110px;
+  width: 90%;
+  text-align: center;
+  font-family: arial, sans-serif;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: rgb(100, 177, 228);
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.circulos {
+	text-align:center;
+	max-width: 90%;
+	margin: 0 auto;
+	position: relative;
+	bottom: 60px;
+}
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .8}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .8}
+  to {opacity: 1}
+}
+
+/* === FIN DE CARRUSEL DE SLIDES === */
+
+/* === IMAGENES === */
+figure {
+	background: #fff;
+	padding: 5% 5% 1% 5%;
+	margin: 2% 0 4% 0;
+	width: 80%;
+}
+figure img {
+	width: 100%;
+	height: auto;
+}
+figcaption {
+	margin-top: 10px;
+}
+a img:hover {
+	filter: brightness(50%);
+}
+/* === FIN DE IMAGENES === */
+
+/* === TIPOGRAFÍAS === */
+:root {
+	font-size: 18px; /* 18 píxeles = 1rem */
+}
+@font-face {
+	font-family: Arial, Helvetica, sans-serif;
+	src: url(fonts/RobotoSlab-ExtraBold.ttf);
+}
+@font-face {
+	font-family: arial;
+	src: url(fonts/Roboto-Medium.ttf);
+}
+@font-face {
+	font-family: MiFuente_03;
+	src: url(fonts/RobotoSlab-Bold.ttf);
+}
+h1, h2, h3 {
+	font-family: MiFuente_01, serif;
+	margin-bottom: 15px;
+	color: #fff;
+}
+h4, h5, h6 {
+	font-family: MiFuente_03, serif;
+	margin-bottom: 15px;
+	color: #fff;
+}
+.intro-text {
+	color: white;
+	text-shadow: 5px 5px 5px #000;
+}
+h1 {
+	font-size: 3rem;
+	line-height: 4.5rem;
+}
+h2 {
+	font-size: 2.2rem;
+	line-height: 3.3rem;
+}
+h3 {
+	font-size: 1.8rem;
+	line-height: 2.6rem;
+}
+h4 {
+	font-size: 1.4rem;
+	line-height: 2rem;
+}
+h5 {
+	font-size: 1.2rem;
+	line-height: 1.8rem;
+}
+h6 {
+	font-size: 1rem;
+	line-height: 1.5rem;
+}
+p, .p-little, figcaption, ul, ol {
+	font-family: arial, sans-serif;
+	margin-bottom: 30px;
+}
+p {
+	font-size: 1rem;
+	line-height: 1.5rem;
+	margin: 2% 0;
+}
+.p-little, figcaption {
+	font-size: 0.8rem;
+	line-height: 1.2rem;
+}
+.p-little {
+	text-align: center;
+}
+/* === FIN DE TIPOGRAFÍAS === */
+
+/* === ENLACES  === */
+a:link {
+	color: #930000;
+	text-decoration: underline;
+}
+a:visited {
+	color: #930000;
+	text-decoration: underline;
+}
+a:hover {
+	color: #6d5f50;
+	text-decoration: underline;
+}
+a:active {
+	color: #6d5f50;
+	text-decoration: underline;
+}
+a.enlace-arriba {
+	color: #00833D;
+	float: right;
+}
+/* === FIN DE ENLACES  === */
+
+/* === BOTONES  === */
+a.boton-estandar:link,  a.boton-estandar:visited {
+	padding: 10px 20px;
+	font-size: 20px;
+	font-family: arial, sans-serif;
+	text-align: center;
+	text-decoration: none;
+	color: #fff;
+	background: black;
+	width: 100%;
+}
+a.boton-estandar:hover {
+	color: #fff;
+	background: #CDBAA5;
+	border: 1px solid black;
+}
+/* === FIN DE BOTONES  === */
+
+/* === LISTAS === */
+ul, ol {
+	list-style-position: inside;
+	margin: 2% 0;
+}
+/* === FIN DE LISTAS === */
+
+/* === CAJAS FLOAT === */
+.caja-productos-inicio {
+	padding: 3%;
+	width: auto;
+	height: 100%;
+	overflow: hidden;
+	margin: 20px 0;
+}
+.caja-float {
+	float: left;
+	width: 50%;
+}
+.caja-float h3{
+	padding: 2%;
+}
+.caja-float p, .caja-float h6{
+	padding: 0 2%;
+}
+/* === FIN DE CAJAS FLOAT === */
+
+/* === CAJAS FLEXBOX === */
+.caja-flex-01 {
+	background: #fff;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: stretch;
+	padding: 2% 0;
+}
+.caja-flex-01 > div {
+	background: skyblue;
+	width: 26%;
+	height: auto;
+	margin: 1%;
+	padding: 2%;
+}
+/* === FIN DE CAJAS FLEXBOX === */
+
+/* === FORMULARIOS === */
+form {
+	display: flex;
+	flex-direction: column;
+	font-family: 'Open Sans', sans-serif;
+	background: #D9CBBB;
+	padding: 3%;
+}
+label, input, textarea {
+	margin: 5px 0;
+	font-family: 'Open Sans', sans-serif;
+}
+input, textarea {
+	padding: 10px 14px;
+}
+textarea {
+	min-height: 200px;
+	max-width: 100%;
+	resize: none;
+}
+input[type=submit] {
+	padding: 10px 16px;
+	cursor: pointer;
+	background: black;
+	color: black;
+	border: none;
+	width: 130px;
+	font-weight: bold;
+	font-size: 1rem;
+	text-align: center;
+	border: 1px solid black;
+}
+input[type=submit]:hover {
+	color: black;
+	background: #CDBAA5;
+	border: 1px solid black;
+}
+/* === FIN DE FOMRULARIOS === */
+
+/* === TABLAS === */
+table, tr, th, td {
+	border: 1px solid darkblue;
+	border-collapse: collapse;
+	font-family: 'Open Sans', sans-serif;
+	padding: 10px 20px;
+}
+table {
+	width: 100%;
+}
+th {
+	text-align: left;
+	background: #00005b;
+	color: white;
+}
+caption {
+	font-weight: bold;
+	margin: 20px 0;
+	font-size: 1.2rem;
+}
+.fila-tabla-oscuro {
+	background: #CDBAA5;
+}
+/* === FIN DE TABLAS === */
+
+/* === MEDIA QUERIES TABLET === */
+@media screen and (max-width: 768px) {
+
+	header, nav, main, footer {
+		width: 100%;
+		padding: 0;
+	}
+	.fondo-main-index {
+		background: #e8ded3 url(images/pexels-rachel-claire-5865282-main-sm-pt.jpg) top center no-repeat;
+		width: 100%;
+		padding: 2% 0;
+	}
+	.intro {
+		width: 80%;
+		height: auto;
+		overflow: hidden;
+		padding: 4%;
+		margin: 0 auto;
+		margin-top: 50px;
+		margin-bottom: 80px;
+	}
+	.caja-flex-01 > div {
+		width: 40%;
+	}
+	aside, .section-interno {
+		width: 100%;
+		float: none;
+		display: block;
+	}
+	.section-interno {
+		width: 94%;
+		padding: 3%;
+	}
+	.section-interno section {
+		margin-bottom: 30px;
+	}
+	.fondo-main-interno {
+		flex-direction: column;
+	}
+	p.p-little {
+		margin: 0;
+		padding: 3% 2%;
+	}
+	table, tr, th, td {
+		padding: 2% 3%;
+		font-size: 0.8rem;
+	}
+	caption {
+		padding: 0;
+		margin: 10px;
+	}
+	table {
+		margin-bottom: 50px;
+	}
+	.slideshow-container {
+		max-width: 100%;
+	}
+	.text {
+		bottom: 0;
+	}
+	.circulos {
+		bottom: -30px;
+	}
+
+}
+/* === FIN DE MEDIA QUERIES TABLET === */
+
+/* === MEDIA QUERIES SMARTPHONE PROTRAIT === */
+@media screen and (max-width: 414px) {
+
+	header, nav, main, footer {
+		width: 100%;
+		padding: 0;
+	}
+	aside, .section-interno {
+		width: 100%;
+		float: none;
+		display: block;
+	}
+	.fondo-main-interno {
+		flex-direction: column;
+	}
+	.fondo-main-index {
+		background: #e8ded3 url(images/pexels-rachel-claire-5865282-main-sm-pt.jpg) top center no-repeat;
+		width: 100%;
+		padding: 2% 0;
+	}
+	.intro {
+		width: 80%;
+		height: auto;
+		overflow: hidden;
+		padding: 4%;
+		margin: 0 auto;
+		margin-top: 50px;
+		margin-bottom: 80px;
+	}
+	h1.intro-text {
+		font-size: 2.4rem;
+		line-height: 2.8rem	;
+	}
+	h2 {
+		line-height: 2.8rem;
+	}
+	p.p-little {
+		margin: 0;
+		padding: 3% 2%;
+	}
+	.caja-productos-inicio {
+		margin: 0;
+	}
+	.caja-float {
+		width: 94%;
+		padding: 5% 3% 0% 3%;
+	}
+	.caja-flex-01 > div {
+		width: 82%;
+		padding: 4%;
+	}
+	.section-interno {
+		width: 88%;
+		padding: 6%;
+	}
+	.section-interno section {
+		margin-bottom: 30px;
+	}
+	table, tr, th, td {
+		padding: 2%;
+		font-size: 0.6rem;
+	}
+	.slideshow-container {
+		max-width: 100%;
+	}
+
+}
+/* === FIN DE MEDIA QUERIES SMARTPHONE PROTRAIT === */
